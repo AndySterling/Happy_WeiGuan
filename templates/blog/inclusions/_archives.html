@@ -1,0 +1,13 @@
+<div class="widget widget-archives">
+  <h3 class="widget-title">归档</h3>
+  <ul>
+    {% for date in date_list %}
+      <li>
+<!--  使用 url 模板标签把视图函数blog:archive解析成URL模式，并把年和月的值替换成date.year和date.month，即生成url      -->
+        <a href="{% url 'blog:archive' date.year date.month %}">{{ date.year }} 年 {{ date.month }} 月</a>
+      </li>
+    {% empty %}
+      暂无归档！
+    {% endfor %}
+  </ul>
+</div>
