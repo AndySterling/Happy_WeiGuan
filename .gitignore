@@ -3,3 +3,6 @@
 
 # Virtual environments
 venv/
+
+# Dataset
+db.sqlite3
